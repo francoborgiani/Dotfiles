@@ -1,0 +1,9 @@
+{
+  "typeCheckingMode": "off",
+  "reportMissingImports": true,
+  "reportUnusedVariable": true,
+  "reportUndefinedVariable": true,
+  "reportUnnecessaryTypeIgnoreComment": false,
+  "reportGeneralTypeIssues": false,
+  "pythonVersion": "3.10"
+}
