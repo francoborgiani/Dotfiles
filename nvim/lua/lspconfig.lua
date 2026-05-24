@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Mappings.
     local opts = { buffer = ev.buf, silent = true }
-    
+
     -- Jump to the definition of the symbol under the cursor
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 
@@ -54,7 +54,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Diagnostic navigation
     vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
     vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
-    vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
     vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
   end,
 })
