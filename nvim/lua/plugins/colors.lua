@@ -13,5 +13,6 @@ return {
         vim.api.nvim_set_hl(0, "NeoTreeNormalNC", {bg = "none"})
         vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", {bg = "none"})
         vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", {bg = "none"})
+
     end
 }
