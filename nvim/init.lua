@@ -28,27 +28,5 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
-local plugins = {
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    {
-        'nvim-telescope/telescope.nvim', version = '*',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            -- optional but recommended
-            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-        }
-    },
-    {"nvim-treesitter/nvim-treesitter", lazy=false, build = ":TSUpdate"}
-}
-local opts = {}
-require("lazy").setup(plugins, opts)
-
-require("catppuccin").setup()
-vim.cmd.colorscheme "catppuccin"
-
-local telescope_funcs = require("telescope.builtin")
-vim.keymap.set('n', '<leader>p', telescope_funcs.find_files, {})
-vim.keymap.set('n', '<leader>l', telescope_funcs.live_grep, {})
-
-require("nvim-treesitter").install { "javascript", "python", "lua" }
+require("lazy").setup("plugins")
 
