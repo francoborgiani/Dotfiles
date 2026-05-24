@@ -2,3 +2,4 @@ background-opacity=0.85
 theme = Catppuccin Macchiato
 window-decoration = false
 font-family = "CaskaydiaCove Nerd Font Mono"
+font-size = 18
