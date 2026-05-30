@@ -6,6 +6,15 @@ return {
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
         },
         config = function()
+            require("telescope").setup {
+                defaults = {
+                    file_ignore_patterns = { "node_modules/", ".git/", "bun.lock", "package-lock.json" },
+                },
+                pickers = {
+                    find_files = { hidden = true },
+                },
+            }
+
             local telescope_funcs = require("telescope.builtin")
             vim.keymap.set('n', '<leader><leader>', telescope_funcs.find_files, {})
             vim.keymap.set('n', '<leader>/', telescope_funcs.live_grep, {})

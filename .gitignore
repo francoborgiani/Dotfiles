@@ -1,1 +1,5 @@
 uv/
+node_modules/
+.luarc.json
+bun.lock
+package.json
